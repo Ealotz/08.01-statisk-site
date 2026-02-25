@@ -1,0 +1,220 @@
+/********** Produktliste *********/
+
+.storename {
+  display: flex; /* side om side */
+  gap: 1.5rem; /* afstand mellem links */
+  align-items: center; /* juster h1 og links på samme højde */
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+}
+
+.product {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  background-color: lavenderblush;
+  border: pink 2px solid;
+  padding: 0.8rem;
+  position: relative;
+}
+
+.produktlisteh2 {
+  padding-left: 9rem;
+  padding-bottom: 1rem;
+}
+
+h3,
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.badge {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background-color: crimson;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.discount {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background-color: rgb(99, 215, 84);
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 0.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  z-index: 1;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.soldout {
+  filter: brightness(50%);
+}
+
+.btn {
+  justify-self: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(208, 208, 208);
+  padding: 0.5rem 3rem;
+  border-radius: 6px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: hotpink;
+  transform: scale(1.05);
+  color: lavenderblush;
+}
+
+/********** Index *********/
+
+h1 {
+  padding: 3rem;
+  padding-left: 4rem;
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  padding-left: 4rem;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  justify-items: center;
+}
+
+.selection a {
+  padding: 2rem;
+  background-color: pink;
+  width: 60%;
+  text-align: center;
+  margin: 0;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.3rem;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.selection a:hover {
+  background-color: hotpink;
+  transform: scale(1.05);
+  color: lavenderblush;
+}
+
+span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/********** Produkt *********/
+
+.produkts1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  align-items: start;
+}
+
+.produkttekst {
+  background-color: lavenderblush;
+  border: pink 2px solid;
+  padding-left: 2rem;
+}
+
+.produktbillede img {
+  width: 100%;
+  aspect-ratio: 16/16;
+  border: pink 2px solid;
+}
+
+.nike {
+  font-size: 2rem;
+  padding-top: 0.5rem;
+}
+
+.overskift {
+  font-weight: 900;
+}
+
+.farve {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem;
+}
+
+h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+}
+
+.basket {
+  margin-top: 1.6rem;
+  margin-bottom: 2.3rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.Palager {
+  font-weight: 900;
+  background-color: rgb(117, 240, 110);
+  width: 73px;
+}
+
+/********** mobile *********/
+
+@media (max-width: 768px) {
+  .produkts1 {
+    grid-template-columns: 1fr;
+    width: 15cm;
+  }
+
+  .container {
+    width: 15cm;
+  }
+
+  h2 {
+    padding-left: 1.9rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
