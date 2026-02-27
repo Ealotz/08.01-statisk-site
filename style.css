@@ -8,7 +8,7 @@
 
 img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/23;
   object-fit: cover;
 }
 
@@ -27,7 +27,7 @@ img {
 .product {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 4;
+  grid-row: span 6;
   background-color: lavenderblush;
   border: pink 2px solid;
   padding: 0.8rem;
