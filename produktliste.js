@@ -1,4 +1,7 @@
-const listURL = "https://kea-alt-del.dk/t7/api/products";
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+const listURL = "https://kea-alt-del.dk/t7/api/products?category=" + category;
 const listContainer = document.querySelector(".product-gallery");
 
 function getProducts() {
@@ -18,7 +21,7 @@ function showProducts(products) {
                 <p class="price">Price: ${product.price} kr.</p>
                 <p class="price">Brand: ${product.brandname}</p>
                 <p class="price">Stock: ${product.soldout}</p>
-                <a href="produkt.html" class="btn">Add to Basket</a>
+                <a href="produkt.html?id=${product.id}"class="btn">Add to Basket</a>
             </article>
     `;
   });
