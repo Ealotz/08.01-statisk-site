@@ -29,7 +29,7 @@ img {
   grid-template-rows: subgrid;
   grid-row: span 6;
   background-color: lavenderblush;
-  border: pink 2px solid;
+  /*border: pink 2px solid;*/
   padding: 0.8rem;
   position: relative;
 }
